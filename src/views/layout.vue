@@ -1,5 +1,8 @@
 <template>
+
    <el-container class="container">
+  
+   
   <el-aside width="200px" class="aside">
     
   <app-aside class="aside-menu"/>
@@ -43,6 +46,7 @@ export default {
    .aside-menu{
        height: 100%;
    }
+
     
   }
   

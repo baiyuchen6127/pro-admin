@@ -1,12 +1,16 @@
 <template>
+ 
   <el-menu
       default-active="2"
       class="el-menu-vertical-demo"
       @open="handleOpen"
       @close="handleClose"
-      background-color="#545c64"
+      background-color="#002033"
       text-color="#fff"
       active-text-color="#ffd04b" router>
+      <div class="img">
+   <img src=".././assets/images/logo.jpg" >
+   </div>
      <el-menu-item index="/">
         <i class="el-icon-menu"></i>
         <span slot="title">首页</span>
@@ -63,4 +67,8 @@ methods:{
 
 }
 </script>
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+  .img img{
+    width: 200px;
+    height: 60px;
+  }</style>
