@@ -1,7 +1,6 @@
-<template>
- 
+<template> 
   <el-menu
-      default-active="2"
+      default-active="/"
       class="el-menu-vertical-demo"
       @open="handleOpen"
       @close="handleClose"
@@ -12,7 +11,7 @@
    <img src=".././assets/images/logo.jpg" >
    </div>
      <el-menu-item index="/">
-        <i class="el-icon-menu"></i>
+        <i class="el-icon-s-home"></i>
         <span slot="title">首页</span>
       </el-menu-item>
       <el-menu-item index="article">
@@ -20,19 +19,19 @@
         <span slot="title">内容管理</span>
       </el-menu-item>
       <el-menu-item index="images">
-        <i class="el-icon-document"></i>
+        <i class="el-icon-picture"></i>
         <span slot="title">素材管理</span>
       </el-menu-item>
       <el-menu-item index="publish">
-        <i class="el-icon-setting"></i>
+        <i class="el-icon-s-promotion"></i>
         <span slot="title">发布文章</span>
       </el-menu-item>
       <el-menu-item index="comment">
-        <i class="el-icon-setting"></i>
+        <i class="el-icon-s-comment"></i>
         <span slot="title">评论管理</span>
       </el-menu-item>
       <el-menu-item index="/fans">
-        <i class="el-icon-setting"></i>
+        <i class="el-icon-present"></i>
         <span slot="title">粉丝管理</span>
       </el-menu-item>
       <el-menu-item index="/person">
@@ -71,4 +70,15 @@ methods:{
   .img img{
     width: 200px;
     height: 60px;
-  }</style>
+  }
+  .iconfont{
+    margin-right: 8px;
+    width: 24px;
+    text-align: center;
+    font-size: 18px;
+    vertical-align: middle;
+    padding-left: 3px;
+  }
+  
+  
+  </style>
