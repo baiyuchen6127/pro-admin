@@ -1,24 +1,28 @@
 <template> 
   <el-menu
-      default-active="/"
+       :default-active="defaultUrl"
       class="el-menu-vertical-demo"
       @open="handleOpen"
       @close="handleClose"
       background-color="#002033"
       text-color="#fff"
-      active-text-color="#ffd04b" router>
-      <div class="img">
+      active-text-color="#ffd04b" router  :collapse="isCollapse">
+      <!-- <div class="img">
    <img src=".././assets/images/logo.jpg" >
-   </div>
+   </div> -->
+    <el-menu-item >
+        
+        <span slot="title" class="title">小白头条</span>
+      </el-menu-item>
      <el-menu-item index="/">
         <i class="el-icon-s-home"></i>
         <span slot="title">首页</span>
       </el-menu-item>
-      <el-menu-item index="article">
+      <el-menu-item index="/content">
         <i class="el-icon-menu"></i>
         <span slot="title">内容管理</span>
       </el-menu-item>
-      <el-menu-item index="images">
+      <el-menu-item index="/images">
         <i class="el-icon-picture"></i>
         <span slot="title">素材管理</span>
       </el-menu-item>
@@ -45,22 +49,34 @@
   export default {
     name:'AppAside',
     components:{},
-    props:{},
+    props:[
+      'is-collapse'
+    ],
     data(){
-      return {}
+      return {
+       defaultUrl:"/"
+        // isCollapse:false
+      }
 
 },
 computed:{},
-watch:{},
+watch:{
+  
+},
 created (){},
-mounted (){},
+mounted (){
+  let href=window.location.href;
+  this.defaultUrl=href.split('/#')[1]
+
+},
 methods:{
      handleOpen(key, keyPath) {
         console.log(key, keyPath);
       },
       handleClose(key, keyPath) {
         console.log(key, keyPath);
-      }
+      },
+      
 }
 
 
@@ -70,6 +86,11 @@ methods:{
   .img img{
     width: 200px;
     height: 60px;
+  }
+  .title{
+    text-align: center;
+    line-height: 56px;
+    font-size: 24px;
   }
   .iconfont{
     margin-right: 8px;

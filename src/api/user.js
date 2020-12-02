@@ -2,6 +2,7 @@
 //用户登录
 import request from "@/utils/request.js";
 export const login = data => {
+ 
   return  request({
         method: "POST",
         url: "/mp/v1_0/authorizations",
@@ -12,14 +13,11 @@ export const login = data => {
 export const getUserProfile = () => {
     return request({
       method:"GET",
-      url:'/mp/v1_0/user/profile',
-      headers:{
-        Authorization:'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2Mzc5OTUyMjEsInVzZXJfaWQiOjEsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.JHbBj4dtZ6Uy0VBbiIqg0CpzOEf-HdQjbN5qmCa9beo'
-      }
-      
+      url:'/mp/v1_0/user/profile'
     })
 }
 //修改用户信息
 export const updateUser = () => {
 
 }
+//获取文章列表

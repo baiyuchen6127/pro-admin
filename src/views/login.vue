@@ -109,6 +109,8 @@ export default {
             type: "success",
           });
           this.loginLoading = false;
+          //将接口返回的用户相关数据放到本地存储，方便应用
+          window.localStorage.setItem('user',JSON.stringify(res.data.data))
           this.$router.push("/")
         })
         .catch((err) => {
