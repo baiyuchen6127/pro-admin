@@ -8,4 +8,5 @@ export const getArticle = params=>{
       params
      
     })
+    console.log(res);
   }
